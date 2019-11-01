@@ -1,0 +1,390 @@
+body {
+    background-image: url("images/thanos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border 1 px
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+h1 {
+    border: 8px double #ffffff;
+    color: #ffdd00;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+h2 {
+    color: #4aabff;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+ol {
+  color: #4aabff;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-family: 'Alfa Slab One', cursive;
+  
+}
+@media (min-width: 600px) {
+    h1 {
+        font-size: 72px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+img {
+    max-width: 100%;
+}
+
+a {
+  color:#32a649;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+/* ==========================================================================
+   Parallax
+   ========================================================================== */
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: red;
+}
+
+.bg1::after {
+  background-image: url(images/tony.jpg);
+}
+
+.bg2::after {
+  background-image: url(images/america.jpg);
+}
+
+
+/* ==========================================================================
+   Slideshow
+   ========================================================================== */
+* {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display:all ;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: right;
+    }
+    
+    /* Number text (1/5 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+   .navbar {
+    align-items: center;
+    background-color: #d8dde2;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.4rem;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    position: relative;
+    z-index: 998;
+    /* make sure the menu stays in front of all other content */
+  }
+  
+  .navbar-spread {
+    display: block;
+  }
+  
+  .navbar-spread .navbar-menu {
+    display: block;
+  }
+  
+  .navbar-spread .navbar-menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    padding: 0.4rem;
+  }
+  
+  .navbar a:link,
+  .navbar a:visited {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover,
+  .navbar a:active {
+    text-decoration: underline;
+  }
+  
+  .navbar-brand {
+    color: #0f1113;
+    font-size: 2.0rem;
+    font-weight: 500;
+    margin: 0 auto 0 0;
+  }
+  
+  .menu-toggle {
+    background-color: transparent;
+    border: none;
+    display: block;
+    font-size: 1.0rem;
+    /* http://stackoverflow.com/questions/29930933/absolute-positioned-item-in-a-flex-container-still-gets-considered-as-item-in-ie */
+    margin: 0 0.2rem 0 auto;
+    padding: 0.6rem 0;
+  }
+  
+  .menu-dismiss {
+    background-color: transparent;
+    border: none;
+    color: #3a444e;
+    display: block;
+    font-size: 24px;
+    margin: 0.2rem;
+    right: 0;
+    padding: 0.2rem;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    /* make sure this is higher than the navbar-menu */
+  }
+  
+  .navbar-slideout .navbar-menu,
+  .navbar-slideout-xs .navbar-menu,
+  .navbar-slideout-sm .navbar-menu,
+  .navbar-slideout-md .navbar-menu,
+  .navbar-slideout-lg .navbar-menu,
+  .navbar-slideout-xl .navbar-menu {
+    background-color: #d8dde2;
+    display: block;
+    height: 100%;
+    left: -280px;
+    opacity: 0.96;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    transition: 0.4s;
+    width: 280px;
+  }
+  
+  .navbar-slideout .navbar-menu ul,
+  .navbar-slideout-xs .navbar-menu ul,
+  .navbar-slideout-sm .navbar-menu ul,
+  .navbar-slideout-md .navbar-menu ul,
+  .navbar-slideout-lg .navbar-menu ul,
+  .navbar-slideout-xl .navbar-menu ul {
+    flex-direction: column;
+  }
+  
+  .navbar-slideout .menu-shown,
+  .navbar-slideout-xs .menu-shown,
+  .navbar-slideout-sm .menu-shown,
+  .navbar-slideout-md .menu-shown,
+  .navbar-slideout-lg .menu-shown,
+  .navbar-slideout-xl .menu-shown {
+    left: 0;
+    transition: 0.4s;
+  }
+  
+  @media (min-width: 480px) {
+    .navbar-slideout-sm .navbar-menu {
+      background-color: transparent;
+      height: auto;
+      overflow: auto;
+      position: static;
+      width: auto;
+    }
+  
+    .navbar-slideout-sm .navbar-menu ul {
+      flex-direction: row;
+    }
+  
+    .navbar-slideout-sm .menu-dismiss,
+    .navbar-slideout-sm .menu-toggle {
+      display: none;
+    }
+  }
+  @media (min-width: 720px) {
+    .navbar-slideout-md .navbar-menu {
+      background-color: transparent;
+      height: auto;
+      overflow: auto;
+      position: static;
+      width: auto;
+    }
+  
+    .navbar-slideout-md .navbar-menu ul {
+      flex-direction: row;
+    }
+  
+    .navbar-slideout-md .menu-dismiss,
+    .navbar-slideout-md .menu-toggle {
+      display: none;
+    }
+  }
+  @media (min-width: 960px) {
+    .navbar-slideout-lg .navbar-menu {
+      background-color: transparent;
+      height: auto;
+      overflow: auto;
+      position: static;
+      width: auto;
+    }
+  
+    .navbar-slideout-lg .navbar-menu ul {
+      flex-direction: row;
+    }
+  
+    .navbar-slideout-lg .menu-dismiss,
+    .navbar-slideout-lg .menu-toggle {
+      display: none;
+    }
+}
